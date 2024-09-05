@@ -10,6 +10,35 @@
         <owl:versionIRI rdf:resource="http://www.marinehabitatweb.org/contaminants/1.0.0"/>
         <rdfs:comment>An ontology that contains contaminant information for Oslofjord.</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.marinehabitatweb.org/contaminants#inorganic_chemicals -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/contaminants#inorganic_chemicals"/>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/contaminants#microorganisms -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/contaminants#microorganisms"/>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/contaminants#organic_chemicals -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/contaminants#organic_chemicals"/>
 </rdf:RDF>
 
 
