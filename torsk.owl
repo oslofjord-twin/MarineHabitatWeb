@@ -9,6 +9,8 @@
      xmlns:torsk="http://www.marinehabitatweb.org/torsk#">
     <owl:Ontology rdf:about="http://www.marinehabitatweb.org/torsk">
         <owl:versionIRI rdf:resource="http://www.marinehabitatweb.org/torsk/1.0.0"/>
+        <rdfs:comment>https://www.mn.uio.no/cees/english/outreach/blogs/marine-science/what-eat-cod.html</rdfs:comment>
+        <rdfs:comment>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5621104/</rdfs:comment>
     </owl:Ontology>
     
 
@@ -24,21 +26,25 @@
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#consumes -->
+    <!-- http://www.marinehabitatweb.org/torsk#is_obs_of -->
 
-    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#consumes">
-        <rdfs:domain rdf:resource="http://www.marinehabitatweb.org/torsk#Species"/>
-        <rdfs:range rdf:resource="http://www.marinehabitatweb.org/torsk#Species"/>
+    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#is_obs_of">
+        <rdfs:domain rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#has_form -->
+    <!-- http://www.marinehabitatweb.org/torsk#is_prey_of -->
 
-    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_form">
-        <rdfs:domain rdf:resource="http://www.marinehabitatweb.org/torsk#Species"/>
-        <rdfs:range rdf:resource="http://www.marinehabitatweb.org/torsk#Life_Phase"/>
+    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#is_prey_of">
+        <owl:inverseOf rdf:resource="http://www.marinehabitatweb.org/torsk#preys_on"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#preys_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#preys_on"/>
     
 
 
@@ -53,39 +59,70 @@
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#Gadus_morhua -->
+    <!-- http://www.marinehabitatweb.org/torsk#Capelin_SalmonObs -->
 
-    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Gadus_morhua">
-        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Species"/>
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Capelin_SalmonObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#Life_Phase -->
+    <!-- http://www.marinehabitatweb.org/torsk#Euphausiids_KrillObs -->
 
-    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Life_Phase">
-        <rdfs:comment>This is a state.</rdfs:comment>
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Euphausiids_KrillObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+        <rdfs:comment>AphiaID 1128  (urn:lsid:marinespecies.org:taxname:1128)</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#Plankton -->
+    <!-- http://www.marinehabitatweb.org/torsk#Gadus_morhuaObs -->
 
-    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Plankton">
-        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Species_Groups"/>
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Gadus_morhuaObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
     </owl:Class>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#Species -->
+    <!-- http://www.marinehabitatweb.org/torsk#HerringObs -->
 
-    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Species"/>
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#HerringObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+    </owl:Class>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#Species_Groups -->
+    <!-- http://www.marinehabitatweb.org/torsk#HyperiideaObs -->
 
-    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Species_Groups"/>
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#HyperiideaObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#Shrimp_CarideaObs -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Shrimp_CarideaObs">
+        <rdfs:subClassOf rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#Taxa -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Taxa"/>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#Taxa_Observation -->
+
+    <owl:Class rdf:about="http://www.marinehabitatweb.org/torsk#Taxa_Observation">
+        <rdfs:comment>This is a single observation and contains the following information:
+Species observed in a particular life phase (e.g. adult cod)
+Geographical Location
+TimeDate 
+Prov (Source)</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -100,44 +137,128 @@
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#adult -->
+    <!-- http://www.marinehabitatweb.org/torsk#Capelin -->
 
-    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#adult">
-        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Life_Phase"/>
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Capelin">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#egg -->
+    <!-- http://www.marinehabitatweb.org/torsk#Euphausiids -->
 
-    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#egg">
-        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Life_Phase"/>
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Euphausiids">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#juvenile -->
+    <!-- http://www.marinehabitatweb.org/torsk#Gadus_morhua -->
 
-    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#juvenile">
-        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Life_Phase"/>
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Gadus_morhua">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Capelin"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Euphausiids"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhua"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Herring"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#larvae -->
+    <!-- http://www.marinehabitatweb.org/torsk#Herring -->
 
-    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#larvae">
-        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Life_Phase"/>
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Herring">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#observation001 -->
+    <!-- http://www.marinehabitatweb.org/torsk#Hyperiidea -->
 
-    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observation001">
-        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhua"/>
-        <torsk:has_form rdf:resource="http://www.marinehabitatweb.org/torsk#adult"/>
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Hyperiidea">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#Shrimp -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Shrimp">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observation12452 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observation12452">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp_CarideaObs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observationID100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID100">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhuaObs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observationID124 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID124">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#HerringObs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observationID2135 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID2135">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+        <torsk:is_obs_of rdf:resource="http://www.marinehabitatweb.org/torsk#Herring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observationID230 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID230">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa_Observation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#observationID453 -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID453">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#HerringObs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#Capelin_SalmonObs"/>
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#Euphausiids_KrillObs"/>
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#Gadus_morhuaObs"/>
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#HerringObs"/>
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#HyperiideaObs"/>
+            <rdf:Description rdf:about="http://www.marinehabitatweb.org/torsk#Shrimp_CarideaObs"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
