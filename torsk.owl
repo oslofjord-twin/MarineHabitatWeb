@@ -65,17 +65,57 @@
     
 
 
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_max_oxy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_max_oxy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>mg/L</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_max_salinity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_max_salinity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>ppt parts per thousand</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.marinehabitatweb.org/torsk#has_pref_max_temp -->
 
     <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_max_temp">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>in Celsius</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_min_oxy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_min_oxy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>mg/L</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_min_salinity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_min_salinity">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>ppt parts per thousand</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.marinehabitatweb.org/torsk#has_pref_min_temp -->
 
-    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_min_temp"/>
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_min_temp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>in C</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -172,6 +212,12 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Capelin">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -180,6 +226,12 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Euphausiids">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -194,8 +246,13 @@ Prov (Source)</rdfs:comment>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Herring"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp"/>
-        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</torsk:has_pref_max_temp>
-        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</torsk:has_pref_min_temp>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#spiny_starfish"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -204,6 +261,13 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Herring">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -212,6 +276,12 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Hyperiidea">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -220,6 +290,12 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#Shrimp">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -270,6 +346,21 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID453">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#HerringObs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#spiny_starfish -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#spiny_starfish">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:is_prey_of rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhua"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
