@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20340\viewh14980\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 @prefix foodweb: <http://example.org/foodweb#> .\
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\
+\
+# Cod Resource\
+foodweb:Cod rdf:type foodweb:Fish ;\
+    foodweb:preysOn foodweb:Capelin, foodweb:Herring, foodweb:PolarCod, foodweb:Plankton, foodweb:Cod ;\
+    foodweb:isPreyedOnBy foodweb:Shark, foodweb:Seal, foodweb:Human .\
+\
+# Cod's Prey\
+foodweb:Capelin rdf:type foodweb:Fish ;\
+    foodweb:isPreyedOnBy foodweb:Cod .\
+\
+foodweb:Herring rdf:type foodweb:Fish ;\
+    foodweb:isPreyedOnBy foodweb:Cod .\
+\
+foodweb:PolarCod rdf:type foodweb:Fish ;\
+    foodweb:isPreyedOnBy foodweb:Cod .\
+\
+foodweb:Plankton rdf:type foodweb:Crustacean ;\
+    foodweb:isPreyedOnBy foodweb:Cod .\
+\
+# Cod Cannibalism\
+foodweb:Cod rdf:type foodweb:Fish ;\
+    foodweb:isPreyedOnBy foodweb:Cod .\
+\
+# Cod's Predators\
+foodweb:Shark rdf:type foodweb:Fish ;\
+    foodweb:preysOn foodweb:Cod .\
+\
+foodweb:Seal rdf:type foodweb:Mammal ;\
+    foodweb:preysOn foodweb:Cod .\
+\
+foodweb:Human rdf:type foodweb:Mammal ;\
+    foodweb:preysOn foodweb:Cod .\
+\
+}
