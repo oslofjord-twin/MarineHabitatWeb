@@ -65,11 +65,17 @@
     
 
 
-    <!-- http://www.marinehabitatweb.org/torsk#has_pref_temp_value -->
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_max_temp -->
 
-    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_temp_value">
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_max_temp">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_min_temp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_min_temp"/>
     
 
 
@@ -188,7 +194,8 @@ Prov (Source)</rdfs:comment>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Herring"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp"/>
-        <torsk:has_pref_temp_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">[ &gt;= 1, &lt;= 22 ]</torsk:has_pref_temp_value>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</torsk:has_pref_min_temp>
     </owl:NamedIndividual>
     
 
@@ -229,6 +236,7 @@ Prov (Source)</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observationID100">
         <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhuaObs"/>
+        <torsk:is_obs_of rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhua"/>
     </owl:NamedIndividual>
     
 
