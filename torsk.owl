@@ -26,6 +26,12 @@
     
 
 
+    <!-- http://www.marinehabitatweb.org/torsk#has_preferred_temperature -->
+
+    <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_preferred_temperature"/>
+    
+
+
     <!-- http://www.marinehabitatweb.org/torsk#is_obs_of -->
 
     <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#is_obs_of">
@@ -45,6 +51,25 @@
     <!-- http://www.marinehabitatweb.org/torsk#preys_on -->
 
     <owl:ObjectProperty rdf:about="http://www.marinehabitatweb.org/torsk#preys_on"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.marinehabitatweb.org/torsk#has_pref_temp_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.marinehabitatweb.org/torsk#has_pref_temp_value">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -163,6 +188,7 @@ Prov (Source)</rdfs:comment>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Herring"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
         <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp"/>
+        <torsk:has_pref_temp_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">[ &gt;= 1, &lt;= 22 ]</torsk:has_pref_temp_value>
     </owl:NamedIndividual>
     
 
