@@ -300,6 +300,24 @@ Prov (Source)</rdfs:comment>
     
 
 
+    <!-- http://www.marinehabitatweb.org/torsk#goldsinny_wrasse -->
+
+    <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#goldsinny_wrasse">
+        <rdf:type rdf:resource="http://www.marinehabitatweb.org/torsk#Taxa"/>
+        <torsk:is_prey_of rdf:resource="http://www.marinehabitatweb.org/torsk#Gadus_morhua"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Hyperiidea"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#Shrimp"/>
+        <torsk:preys_on rdf:resource="http://www.marinehabitatweb.org/torsk#spiny_starfish"/>
+        <torsk:has_pref_max_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</torsk:has_pref_max_oxy>
+        <torsk:has_pref_max_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</torsk:has_pref_max_salinity>
+        <torsk:has_pref_max_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</torsk:has_pref_max_temp>
+        <torsk:has_pref_min_oxy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</torsk:has_pref_min_oxy>
+        <torsk:has_pref_min_salinity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</torsk:has_pref_min_salinity>
+        <torsk:has_pref_min_temp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</torsk:has_pref_min_temp>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.marinehabitatweb.org/torsk#observation12452 -->
 
     <owl:NamedIndividual rdf:about="http://www.marinehabitatweb.org/torsk#observation12452">
